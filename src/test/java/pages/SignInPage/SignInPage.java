@@ -20,6 +20,10 @@ public class SignInPage extends BasePage {
     }
 
     private By signInButton = By.id("btn1");
+    private By logo = By.id("logo");
+    private By emailField = By.xpath("//input[@ng-model='Email']");
+    private By paswwordField = By.xpath("//input[@ng-model='Password']");
+
 
     public void clickSignInButton (){
         LOG.info("Click 'Sign In' button");
@@ -30,4 +34,14 @@ public class SignInPage extends BasePage {
         LOG.info("Verify if'Sign in ' button is displayed");
         return driver.findElement(signInButton).isDisplayed();
     }
+
+    public boolean isLogoDisplayed() {
+        LOG.info("Verify if Logo image is displayed");
+        return driver.findElement(logo).isDisplayed();
+    }
+
+
+
+
+
 }
